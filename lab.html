@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Library</title>
+
+<style>
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0B1120;
+    color: #F8FAFC;
+    display:grid;
+ 
+}
+
+header {
+    background: #161F32;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    color: #3B82F6;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+nav a:hover {
+    color: #22D3EE;
+}
+
+.hero {
+    padding: 90px 7%;
+    background: linear-gradient(90deg, #0B1120, #172D4B);
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #3B82F6;
+}
+
+.hero p {
+    color: #CBD5E1;
+    margin-bottom: 25px;
+}
+
+.btn {
+    background: #3B82F6;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #2563EB;
+}
+
+section {
+    padding: 45px 7%;
+}
+
+.section-title {
+    color: #22D3EE;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.categories, .books {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+}
+
+.category, .book {
+    background: #161F32;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid #273449;
+    text-align: center;
+    
+}
+
+.category {
+    color: #22D3EE;
+    font-size: 19px;
+}
+
+.book .cover {
+    height: 130px;
+    background: #243754;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.book h3 {
+    margin-bottom: 10px;
+}
+
+.book p {
+    color: #CBD5E1;
+    margin-bottom: 15px;
+}
+
+.book button {
+    width: 100%;
+}
+
+/* .about {
+    background: #161F32;
+    text-align: center;
+} */
+
+footer {
+    background: #070B14;
+    padding: 25px;
+    text-align: center;
+    color: #94A3B8;
+}
+
+@media (max-width: 600px) {
+    header {
+        justify-content: center;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 7px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+}
+ .books {
+            padding: 45px 8%;
+        }
+
+        .books h2 {
+            margin-bottom: 25px;
+            color:#22D3EE;
+           position: absolute;
+           top: 100rem;
+           display: flex;
+        }
+
+        .book-container {
+            display:contents;
+            grid-template-columns:
+                repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+        }
+
+        .book {
+           
+        }
+
+        .book:hover {
+            transform: translateY(-7px);
+            border-color: #FBBF24;
+        }
+
+        .book img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .book h3 {
+            margin-bottom: 10px;
+        }
+
+        .book p {
+            color: #94A3B8;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background: #111827;
+            /* position: absolute;\
+            top: 550vh;
+            width: 100%; */
+            padding: 25px;
+            text-align: center;
+            color: #94A3B8;
+           
+           
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 6px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+        }
+    
+        
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">📚 My Library</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#books">Books</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
+
+<div class="hero" id="home">
+    <h1>Books Open a World of <span>Possibilities</span></h1>
+    <p>Discover knowledge, explore new ideas and enjoy reading.</p>
+    <a href="#books" class="btn">Explore Books →</a>
+</div>
+
+<section id="categories">
+    <h2 class="section-title">Book Categories</h2>
+    <div class="categories">
+        <div class="category">📖<p>Fiction</p></div>
+        <div class="category">🎓<p>Education</p></div>
+        <div class="category">💻<p>Technology</p></div>
+        <div class="category">💼<p>Business</p></div>
+    </div>
+</section>
+
+<section id="books">
+    <h2 class="section-title">Popular Books</h2>
+    <div class="books">
+
+        <div class="book">
+            <div class="cover">📕</div>
+            <h3>Learn HTML</h3>
+            <p>Web Development</p>
+            <button class="btn" onclick="borrowBook('Learn HTML')">
+                Borrow Book
+            </button>
+        </div>
+
+        <div class="book">
+            <div class="cover">📘</div>
+            <h3>Learn CSS</h3>
+            <p>Web Design</p>
+            <button class="btn" onclick="borrowBook('Learn CSS')">
+                Borrow Book
+            </button>
+        </div>
+
+        <div class="book">
+            <div class="cover">📗</div>
+            <h3>Learn C#</h3>
+            <p>Programming</p>
+            <button class="btn" onclick="borrowBook('Learn C#')">
+                Borrow Book
+            </button>
+        </div>
+
+        <div class="book">
+            <div class="cover">📙</div>
+            <h3>Learn SQL</h3>
+            <p>Database</p>
+            <button class="btn" onclick="borrowBook('Learn SQL')">
+                Borrow Book
+            </button>
+        </div>
+
+    </div>
+</section>
+
+<section class="about" id="about">
+    <!-- <h2 class="section-title">About Our Library</h2> -->
+    <!-- <p>Our library helps students discover books, learn new skills -->
+    <!-- and grow their knowledge every day.</p> -->
+</section>
+<section class="books" id="books">
+        <!-- <h2>Popular Books</h2> -->
+
+        <div class="book-container">
+
+            <div class="book">
+                <img src="https://covers.openlibrary.org/b/id/10521270-L.jpg"
+                     alt="Book cover">
+                <h3>Rich Dad Poor Dad</h3>
+                <p>Finance & Personal Growth</p>
+                <button class="btn">View Book</button>
+            </div>
+
+            <div class="book">
+                <img src="https://covers.openlibrary.org/b/id/10521258-L.jpg"
+                     alt="Book cover">
+                <h3>Think and Grow Rich</h3>
+                <p>Success & Motivation</p>
+                <button class="btn">View Book</button>
+            </div>
+
+            <div class="book">
+                <img src="https://covers.openlibrary.org/b/id/10521265-L.jpg"
+                     alt="Book cover">
+                <h3>Learning & Knowledge</h3>
+                <p>Education & Learning</p> 
+                <button class="btn">View Book</button>
+            </div>
+
+        </div>
+    </section>
+    
+<footer>
+    <p>© 2026 My Library | Read • Learn • Grow</p>
+</footer>
+
+<script>
+function borrowBook(bookName) {
+    alert("You selected: " + bookName);
+}
+</script>
+
+</body>
+</html>
+
